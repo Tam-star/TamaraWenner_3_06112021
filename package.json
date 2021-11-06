@@ -1,0 +1,19 @@
+{
+  "name": "p3_wenner_tamara",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tam-star/TamaraWenner_3_06112021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tam-star/TamaraWenner_3_06112021/issues"
+  },
+  "homepage": "https://github.com/Tam-star/TamaraWenner_3_06112021#readme"
+}
