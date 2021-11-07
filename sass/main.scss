@@ -3,6 +3,10 @@
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 @font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+}
+@font-face {
     font-family: 'Roboto-Bold';
     src: url('../fonts/Roboto-Bold.ttf') format('truetype');
 }
@@ -23,7 +27,33 @@ $light-grey:rgb(246, 246, 246);
 @mixin block-shadow($colour){
     filter: drop-shadow(0 2px 4px $colour);
 }
+@mixin button-style{
+        width: 200px;
+        background: $secondary;
+        background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
+        color:white;
+        border-radius: 50px;
+        @include block-shadow(rgb(160, 160, 160));
+        margin:auto;
+        margin-top:20px;
+        padding-bottom:20px;
+        padding-top:20px;
+        padding-left:20px;
+        padding-right: 20px;
+        font-weight:bold;
+        text-align: center;
+}
+
+@mixin article-style{
+    width:90%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    @include block-shadow(rgb(206, 206, 206));
+}
     
+
+/******GENERALE*******/
 
 *{
     margin:0;
@@ -35,12 +65,48 @@ $light-grey:rgb(246, 246, 246);
     position:relative;
     padding-top:20px;
     padding-bottom: 10px;
-    box-shadow: 0px 3px 5px rgb(201, 201, 201);
     & img{
         display:block;
         width:200px;
         margin: auto;
     }
+    & i{
+        position:absolute;
+        left:5%;
+        top:28px;
+    }
+}
+
+.fa-heart{
+    font-size:30px;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+main{
+    background-color: $light-grey;
+    & h2{
+        font-family: 'Roboto-Black';
+        font-size:30px;
+        margin-bottom: 30px;
+        width:90%;
+    }
+    & section{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+/*******SPECIFIQUE ACCUEIL*******/
+
+.logo-shadow{
+    box-shadow: 0px 3px 5px rgb(201, 201, 201);
 }
 
 #localisation{
@@ -64,6 +130,7 @@ $light-grey:rgb(246, 246, 246);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top:50px;
     text-align: center;
     & h1, p{
         margin-bottom: 10px;
@@ -76,41 +143,21 @@ $light-grey:rgb(246, 246, 246);
         font-size:22px;
     }
     &__bouton{
-        width: 200px;
-        background: $secondary;
-        background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
-        color:white;
-        border-radius: 50px;
-        @include block-shadow(rgb(160, 160, 160));
-        margin-top:20px;
-        padding-bottom:20px;
-        padding-top:20px;
-        padding-left:20px;
-        padding-right: 20px;
-        font-weight:bold;
+        @include button-style();
     }
 }
 
-main{
-    & h2{
-        font-family: 'Roboto-Black';
-        font-size:30px;
-        margin:auto;
-        margin-bottom: 30px;
-        width:90%;
-    }
-    & section{
-        display:flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        padding-bottom:50px;
-        padding-top:50px;
-    }
+#fonctionnement, .restaurants{
+    padding-bottom:50px;
+    padding-top:50px;
 }
 
+#fonctionnement{
+    background-color: white;
+}
 .explication{
     width:85%;
+    background-color: $light-grey;
     border-radius: 20px;
     box-shadow: 0px 5px 10px #E4E4E4;
     margin-bottom:25px;
@@ -158,14 +205,12 @@ main{
 }
 
 .restaurants{
-    background-color: $light-grey;
+    & a{
+        @include article-style();
+        display:block;
+    }
     & article{
-        background-color: white;
-        width:90%;
-        border-radius: 20px;
-        margin-bottom: 20px;
         font-size:20px;
-        @include block-shadow(rgb(206, 206, 206));
         & img{
             object-fit: cover;
             width:100%;
@@ -177,10 +222,8 @@ main{
     &__description{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding:20px;
-        &__icon{
-            font-size: 30px;
-        }
         & h3{
             font-family: 'Roboto-Bold';
         }
@@ -235,4 +278,77 @@ footer{
 .fa-hands-helping{
     font-size:13px;
 }
+
+/*****SPECIFIQUE PAGE MENU******/
+
+.header__image{
+    height:350px;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    &__palette{
+        background-image: url("../images/restaurants/palette_du_gout.jpg");
+    }
+}
+
+#nom_restaurant{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light-grey;
+    border-radius:30px 30px 0 0;
+    padding-left:20px;
+    padding-right:20px;
+    & h1{
+        font-family: 'Shrikhand';
+    }
+}
+
+#menu {
+    padding-bottom: 90px;
+    & section{
+        margin-bottom: 30px;
+    }
+
+    & h2{
+        font-family: 'Roboto-Thin';
+        font-size: 22px;    
+        margin-bottom: 20px;
+        &::after{
+            content:"";
+            display:block;
+            background-color: $tertiary;
+            height:5px;
+            width:50px;
+            margin-top:6px;
+        }
+    }
+}
+
+.plat{
+    @include article-style();
+    padding:15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    & h3{
+        margin-bottom:5px;
+    }
+    &__prix{
+        font-weight:bolder;
+        text-align:center;
+        height:100%;
+        width:10%;
+    }
+}
+
+#command_button{
+    @include button-style();
+}
+
+
+
+
 
