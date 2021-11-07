@@ -15,6 +15,16 @@
     src: url('../fonts/shrikhand.regular.ttf') format('truetype');
 }
 
+$primary:#9356DC;
+$secondary:#FF79DA;
+$tertiary: #99E2D0;
+$light-grey:rgb(246, 246, 246);
+
+@mixin block-shadow($colour){
+    filter: drop-shadow(0 2px 4px $colour);
+}
+    
+
 *{
     margin:0;
     padding:0;
@@ -34,11 +44,11 @@
 }
 
 #localisation{
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(234, 234, 234);
     display:flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 60px;
     & i{
         margin-right: 10px;
     }
@@ -49,7 +59,7 @@
 
 #explorer{
     height:300px;
-    background-color: rgb(240, 240, 240);
+    background-color: $light-grey;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -62,25 +72,31 @@
         width:70%;
         font-family: 'Roboto-Black';
     }
+    & p{
+        font-size:22px;
+    }
     &__bouton{
         width: 200px;
-        background: rgb(255,121,218);
-        background: linear-gradient(to bottom, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+        background: $secondary;
+        background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
         color:white;
-        border-radius: 20px;
-        filter: drop-shadow(0 2px 4px rgb(160, 160, 160));
+        border-radius: 50px;
+        @include block-shadow(rgb(160, 160, 160));
         margin-top:20px;
-        padding-bottom:15px;
-        padding-top:15px;
+        padding-bottom:20px;
+        padding-top:20px;
+        padding-left:20px;
+        padding-right: 20px;
+        font-weight:bold;
     }
 }
 
 main{
     & h2{
         font-family: 'Roboto-Black';
+        font-size:30px;
         margin:auto;
         margin-bottom: 30px;
-        margin-top:50px;
         width:90%;
     }
     & section{
@@ -88,11 +104,9 @@ main{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        padding-bottom:50px;
+        padding-top:50px;
     }
-}
-
-#fonctionnement{
-    margin-bottom:50px;
 }
 
 .explication{
@@ -104,7 +118,7 @@ main{
         position:relative;
         left:-10px;
         top:20px;
-        background-color: #9356DC ;
+        background-color: $primary;
         width:30px;
         height: 30px;
         border-radius: 100%;
@@ -144,18 +158,21 @@ main{
 }
 
 .restaurants{
-    background-color: rgb(240, 240, 240);
+    background-color: $light-grey;
     & article{
         background-color: white;
         width:90%;
         border-radius: 20px;
         margin-bottom: 20px;
+        font-size:20px;
+        @include block-shadow(rgb(206, 206, 206));
         & img{
             object-fit: cover;
             width:100%;
-            height:300px;
+            height:240px;
             border-radius: 20px 20px 0 0;
         }
+        
     }
     &__description{
         display: flex;
@@ -164,7 +181,23 @@ main{
         &__icon{
             font-size: 30px;
         }
+        & h3{
+            font-family: 'Roboto-Bold';
+        }
     }
+    &__nouveau{
+        background-color: $tertiary;       
+        color:rgb(0, 135, 102);
+        font-family: 'Roboto-Bold';
+        position:absolute;
+        right:15px;
+        top:20px;
+        width:100px;
+        text-align: center;
+        padding:10px;
+        border-radius: 3px;
+    }
+    
 }
 
 footer{
@@ -174,6 +207,18 @@ footer{
     padding-bottom:50px;
     padding-left: 30px;
     font-weight:bold;
+    font-size:18px;
+    & div{
+        display: flex;
+        align-items: center;
+        & i{
+            margin-right:12px;
+        }
+    }
+    & div, p{
+        margin-bottom: 5px;
+    }
+
 }
 
 .logo-font{
@@ -182,3 +227,12 @@ footer{
     font-size:25px;
     margin-bottom: 20px;
 }
+
+.fa-utensils{
+    font-size:16px;
+}
+
+.fa-hands-helping{
+    font-size:13px;
+}
+
