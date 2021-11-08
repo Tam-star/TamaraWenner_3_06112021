@@ -301,12 +301,83 @@ footer div, footer p {
   margin-top: 6px;
 }
 
+@keyframes progress-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+#plat1 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 150ms;
+}
+
+#plat2 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 300ms;
+}
+
+#plat3 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 450ms;
+}
+
+#plat4 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 600ms;
+}
+
+#plat5 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 750ms;
+}
+
+#plat6 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 900ms;
+}
+
+#plat7 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1050ms;
+}
+
+#plat8 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1200ms;
+}
+
+#plat9 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1350ms;
+}
+
+#plat10 {
+  animation: progress-menu 1500ms;
+  animation-fill-mode: forwards;
+  animation-delay: 1500ms;
+}
+
 .plat {
   width: 90%;
   margin-bottom: 20px;
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0 2px 4px #cecece);
+  opacity: 0;
   width: 90%;
   margin: auto;
   margin-bottom: 15px;
