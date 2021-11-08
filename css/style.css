@@ -281,6 +281,7 @@ footer div, footer p {
 }
 
 #menu {
+  padding-top: 30px;
   padding-bottom: 90px;
 }
 #menu section {
@@ -306,19 +307,75 @@ footer div, footer p {
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0 2px 4px #cecece);
-  padding: 15px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 15px;
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+}
+.plat:hover i {
+  transform: rotate(360deg);
+}
+.plat:hover .check {
+  right: 0;
+}
+.plat:hover .nom_description_et_prix {
+  width: calc(100% - 112px);
+}
+
+.nom_description_et_prix {
+  margin: 15px;
+  transition: width 1s;
+  width: calc(100% - 30px);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-.plat h3 {
-  margin-bottom: 5px;
+
+.nom_et_description {
+  transition: margin-right 1s;
+  width: 100%;
+  overflow: hidden;
 }
-.plat__prix {
-  font-weight: bolder;
-  text-align: center;
+
+.nom h3 {
+  white-space: nowrap;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: "Roboto-Bold";
+}
+
+.description {
+  margin-top: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.prix {
+  transition: transform 1s;
+  margin-left: 10px;
+  font-family: "Roboto-Bold";
+}
+
+.check {
+  transition: right 1s;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  width: 80px;
   height: 100%;
-  width: 10%;
+  position: absolute;
+  right: -82px;
+  display: flex;
+}
+.check i {
+  transition: transform 1s;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
 }
 
 #command_button {
