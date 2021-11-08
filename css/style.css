@@ -264,6 +264,15 @@ footer div, footer p {
 .header__image__palette {
   background-image: url("../images/restaurants/palette_du_gout.jpg");
 }
+.header__image__note {
+  background-image: url("../images/restaurants/note_enchantee.jpg");
+}
+.header__image__francaise {
+  background-image: url("../images/restaurants/a_la_francaise.jpg");
+}
+.header__image__delice {
+  background-image: url("../images/restaurants/delice_des_sens.jpg");
+}
 
 #nom_restaurant {
   width: 100%;
