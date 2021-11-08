@@ -67,6 +67,45 @@ main section {
 }
 
 /*******SPECIFIQUE ACCUEIL*******/
+@keyframes spinning-loader {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes disappearing-loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+#loading-spinner {
+  animation: disappearing-loader 300ms;
+  animation-delay: 2000ms;
+  animation-fill-mode: forwards;
+  background-color: #f6f6f6;
+  position: fixed;
+  z-index: 2;
+  opacity: 70%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+#loading-spinner i {
+  animation: spinning-loader 2000ms linear infinite;
+  display: block;
+  margin: auto;
+  font-size: 60px;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
 .logo-shadow {
   box-shadow: 0px 3px 5px #c9c9c9;
 }
