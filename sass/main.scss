@@ -41,6 +41,7 @@ $light-grey:rgb(246, 246, 246);
         padding-right: 20px;
         font-weight:bold;
         text-align: center;
+        cursor: pointer;
         &:hover{
             @include block-shadow(rgb(100, 100, 100));
             background: linear-gradient(to bottom, lighten($secondary, 5%) 0%, lighten($primary, 5%) 100%);
@@ -68,6 +69,7 @@ $light-grey:rgb(246, 246, 246);
         z-index: 2;
     }
     & .far{
+        cursor: pointer;
         font-size : 32px;
         color:black;
         position:relative;
@@ -194,6 +196,7 @@ main{
         margin-right: 10px;
     }
     & p{   
+        cursor: pointer;
         font-family: 'Roboto-Bold';
     }
 }
@@ -340,6 +343,12 @@ footer{
     & div, p{
         margin-bottom: 5px;
     }
+    & p {
+        cursor:pointer;
+        & a{
+            color:white;
+        }
+    }
 
 }
 
@@ -451,6 +460,7 @@ footer{
 
 .plat{
     @include article-style();
+    cursor: pointer;
     opacity:0;
     width:90%;
     margin:auto;
@@ -524,67 +534,6 @@ footer{
         margin:auto;
     }
 }
-
-
-
-// .plat{
-//     @include article-style();
-//     height:80px;
-//     display:flex;
-//     justify-content: space-between;
-//     max-width:90%;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     &__nom{
-//         margin:15px;
-//         width:100%;
-//         background-color: pink;
-//         text-overflow: ellipsis;
-//          overflow: hidden;
-//         & p{
-            
-//             text-overflow: ellipsis;
-//             display: block;
-//             overflow: hidden
-//         }
-//         & h3{
-//             margin-bottom:5px;
-//             text-overflow: ellipsis;
-//             overflow: hidden
-//         }
-//     }
-//     &__flex_end{
-//         display:flex;
-//         justify-content: flex-end;
-//         align-items: flex-end;
-//         height:100%;
-//         width:20%; //POUR ANIMATION : passage à 40%
-//         border-radius: 0 20px 20px 0;
-//         background-color: yellow;
-//     }
-//     &__prix{
-//         font-weight:bolder;
-//         text-align:center;
-//         margin:15px;
-//     }
-//     &__apparition{
-//         background-color: $tertiary;
-//         width:100%; //POUR ANIMATION : passage à 100%
-//         height:100%;
-//         border-radius: 0 20px 20px 0;
-//         display:flex;
-//         & i{
-//             width:40px;
-//             color:white;
-//             font-size:30px;
-//             text-align: center;
-//             margin:auto;
-//             margin-left: 25px;
-//             margin-right:25px;
-//         }
-//     }
-
-// }
 
 #command_button{
     @include button-style();

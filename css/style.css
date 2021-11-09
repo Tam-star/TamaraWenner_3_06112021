@@ -121,6 +121,7 @@ main section {
   margin-right: 10px;
 }
 #localisation p {
+  cursor: pointer;
   font-family: "Roboto-Bold";
 }
 
@@ -158,6 +159,7 @@ main section {
   padding-right: 20px;
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
 }
 #explorer__bouton:hover {
   filter: drop-shadow(0 2px 4px #646464);
@@ -259,6 +261,7 @@ main section {
   z-index: 2;
 }
 .restaurants__description__icon .far {
+  cursor: pointer;
   font-size: 32px;
   color: black;
   position: relative;
@@ -304,6 +307,12 @@ footer div i {
 }
 footer div, footer p {
   margin-bottom: 5px;
+}
+footer p {
+  cursor: pointer;
+}
+footer p a {
+  color: white;
 }
 
 .logo-font {
@@ -375,6 +384,7 @@ footer div, footer p {
   z-index: 2;
 }
 .nom_restaurant__coeur .far {
+  cursor: pointer;
   font-size: 32px;
   color: black;
   position: relative;
@@ -487,6 +497,7 @@ footer div, footer p {
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0 2px 4px #cecece);
+  cursor: pointer;
   opacity: 0;
   width: 90%;
   margin: auto;
@@ -573,6 +584,7 @@ footer div, footer p {
   padding-right: 20px;
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
 }
 #command_button:hover {
   filter: drop-shadow(0 2px 4px #646464);
