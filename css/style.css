@@ -245,6 +245,31 @@ main section {
 .restaurants__description h3 {
   font-family: "Roboto-Bold";
 }
+.restaurants__description__icon .fas {
+  font-size: 28px;
+  background: linear-gradient(to right, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 500ms;
+  z-index: 2;
+}
+.restaurants__description__icon .far {
+  font-size: 32px;
+  color: black;
+  position: relative;
+  z-index: 1;
+  left: 35px;
+  top: 1px;
+  transition: opacity 500ms;
+}
+.restaurants__description__icon .far:hover + i {
+  opacity: 100%;
+}
+.restaurants__description__icon .far:hover {
+  opacity: 0%;
+}
 .restaurants__nouveau {
   background-color: #99E2D0;
   color: #008766;
@@ -326,6 +351,33 @@ footer div, footer p {
 }
 #nom_restaurant h1 {
   font-family: "Shrikhand";
+  font-size: 29px;
+}
+
+.div_de_coeur .fas {
+  font-size: 28px;
+  background: linear-gradient(to right, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 500ms;
+  z-index: 2;
+}
+.div_de_coeur .far {
+  font-size: 32px;
+  color: black;
+  position: relative;
+  z-index: 1;
+  left: 35px;
+  top: 1px;
+  transition: opacity 500ms;
+}
+.div_de_coeur .far:hover + i {
+  opacity: 100%;
+}
+.div_de_coeur .far:hover {
+  opacity: 0%;
 }
 
 #menu {

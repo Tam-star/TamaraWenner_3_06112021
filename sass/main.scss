@@ -270,6 +270,34 @@ main{
         & h3{
             font-family: 'Roboto-Bold';
         }
+        &__icon{
+            & .fas{
+                font-size : 28px;
+                background: linear-gradient(to right, $secondary 0%, $primary 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity:0;
+                transition: opacity 500ms;
+                z-index: 2;
+            }
+            & .far{
+                font-size : 32px;
+                color:black;
+                position:relative;
+                z-index: 1;
+                left:35px;
+                top:1px;
+                transition: opacity 500ms;
+                &:hover + i{
+                    opacity:100%;
+                }
+                &:hover{
+                    opacity:0%;
+                }
+            }
+        }
+
     }
     &__nouveau{
         background-color: $tertiary;       
@@ -355,8 +383,41 @@ footer{
     padding-right:20px;
     & h1{
         font-family: 'Shrikhand';
+        font-size: 29px;
     }
 }
+
+
+.div_de_coeur{
+    //background-color: hotpink;
+    & .fas{
+        font-size : 28px;
+        background: linear-gradient(to right, $secondary 0%, $primary 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity:0;
+        transition: opacity 500ms;
+        z-index: 2;
+        }
+    & .far{
+            font-size : 32px;
+            color:black;
+            position:relative;
+            z-index: 1;
+            left:35px;
+            top:1px;
+            transition: opacity 500ms;
+            &:hover + i{
+                opacity:100%;
+            }
+            &:hover{
+                opacity:0%;
+        }
+    }
+
+}
+
 
 #menu {
     padding-top:30px;
