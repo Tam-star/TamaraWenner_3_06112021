@@ -51,6 +51,34 @@ $light-grey:rgb(246, 246, 246);
     border-radius: 20px;
     @include block-shadow(rgb(206, 206, 206));
 }
+
+@mixin coeur{
+    & .fas{
+        font-size : 28px;
+        background: linear-gradient(to right, $secondary 0%, $primary 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity:0;
+        transition: opacity 500ms;
+        z-index: 2;
+    }
+    & .far{
+        font-size : 32px;
+        color:black;
+        position:relative;
+        z-index: 1;
+        left:35px;
+        top:1px;
+        transition: opacity 500ms;
+        &:hover + i{
+            opacity:100%;
+        }
+        &:hover{
+            opacity:0%;
+        }
+    }   
+}
     
 
 /******GENERALE*******/
@@ -271,31 +299,7 @@ main{
             font-family: 'Roboto-Bold';
         }
         &__icon{
-            & .fas{
-                font-size : 28px;
-                background: linear-gradient(to right, $secondary 0%, $primary 100%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                opacity:0;
-                transition: opacity 500ms;
-                z-index: 2;
-            }
-            & .far{
-                font-size : 32px;
-                color:black;
-                position:relative;
-                z-index: 1;
-                left:35px;
-                top:1px;
-                transition: opacity 500ms;
-                &:hover + i{
-                    opacity:100%;
-                }
-                &:hover{
-                    opacity:0%;
-                }
-            }
+            @include coeur();
         }
 
     }
@@ -371,7 +375,7 @@ footer{
     }
 }
 
-#nom_restaurant{
+.nom_restaurant{
     width:100%;
     height:80px;
     display:flex;
@@ -381,42 +385,26 @@ footer{
     border-radius:30px 30px 0 0;
     padding-left:20px;
     padding-right:20px;
-    & h1{
-        font-family: 'Shrikhand';
-        font-size: 29px;
+    overflow: hidden;
+    white-space: nowrap;
+    &__txt{
+        overflow: hidden;
+        & h1{
+            font-family: 'Shrikhand';
+            font-size: 28px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding-right:10px;
+        }
     }
+    &__coeur{
+        @include coeur();   
+    }
+    
 }
 
 
-.div_de_coeur{
-    //background-color: hotpink;
-    & .fas{
-        font-size : 28px;
-        background: linear-gradient(to right, $secondary 0%, $primary 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity:0;
-        transition: opacity 500ms;
-        z-index: 2;
-        }
-    & .far{
-            font-size : 32px;
-            color:black;
-            position:relative;
-            z-index: 1;
-            left:35px;
-            top:1px;
-            transition: opacity 500ms;
-            &:hover + i{
-                opacity:100%;
-            }
-            &:hover{
-                opacity:0%;
-        }
-    }
 
-}
 
 
 #menu {

@@ -338,7 +338,7 @@ footer div, footer p {
   background-image: url("../images/restaurants/delice_des_sens.jpg");
 }
 
-#nom_restaurant {
+.nom_restaurant {
   width: 100%;
   height: 80px;
   display: flex;
@@ -348,13 +348,20 @@ footer div, footer p {
   border-radius: 30px 30px 0 0;
   padding-left: 20px;
   padding-right: 20px;
+  overflow: hidden;
+  white-space: nowrap;
 }
-#nom_restaurant h1 {
+.nom_restaurant__txt {
+  overflow: hidden;
+}
+.nom_restaurant__txt h1 {
   font-family: "Shrikhand";
-  font-size: 29px;
+  font-size: 28px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-right: 10px;
 }
-
-.div_de_coeur .fas {
+.nom_restaurant__coeur .fas {
   font-size: 28px;
   background: linear-gradient(to right, #FF79DA 0%, #9356DC 100%);
   background-clip: text;
@@ -364,7 +371,7 @@ footer div, footer p {
   transition: opacity 500ms;
   z-index: 2;
 }
-.div_de_coeur .far {
+.nom_restaurant__coeur .far {
   font-size: 32px;
   color: black;
   position: relative;
@@ -373,10 +380,10 @@ footer div, footer p {
   top: 1px;
   transition: opacity 500ms;
 }
-.div_de_coeur .far:hover + i {
+.nom_restaurant__coeur .far:hover + i {
   opacity: 100%;
 }
-.div_de_coeur .far:hover {
+.nom_restaurant__coeur .far:hover {
   opacity: 0%;
 }
 
