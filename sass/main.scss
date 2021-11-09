@@ -29,7 +29,6 @@ $light-grey:rgb(246, 246, 246);
 }
 @mixin button-style{
         width: 200px;
-        background: $secondary;
         background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
         color:white;
         border-radius: 50px;
@@ -42,6 +41,11 @@ $light-grey:rgb(246, 246, 246);
         padding-right: 20px;
         font-weight:bold;
         text-align: center;
+        &:hover{
+            @include block-shadow(rgb(100, 100, 100));
+            background: linear-gradient(to bottom, lighten($secondary, 5%) 0%, lighten($primary, 5%) 100%);
+
+        }
 }
 
 @mixin article-style{
@@ -399,12 +403,8 @@ footer{
     }
     &__coeur{
         @include coeur();   
-    }
-    
+    }   
 }
-
-
-
 
 
 #menu {

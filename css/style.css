@@ -146,7 +146,6 @@ main section {
 }
 #explorer__bouton {
   width: 200px;
-  background: #FF79DA;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   color: white;
   border-radius: 50px;
@@ -159,6 +158,10 @@ main section {
   padding-right: 20px;
   font-weight: bold;
   text-align: center;
+}
+#explorer__bouton:hover {
+  filter: drop-shadow(0 2px 4px #646464);
+  background: linear-gradient(to bottom, #ff93e1 0%, #a16be0 100%);
 }
 
 #fonctionnement, .restaurants {
@@ -558,7 +561,6 @@ footer div, footer p {
 
 #command_button {
   width: 200px;
-  background: #FF79DA;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   color: white;
   border-radius: 50px;
@@ -571,6 +573,10 @@ footer div, footer p {
   padding-right: 20px;
   font-weight: bold;
   text-align: center;
+}
+#command_button:hover {
+  filter: drop-shadow(0 2px 4px #646464);
+  background: linear-gradient(to bottom, #ff93e1 0%, #a16be0 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
