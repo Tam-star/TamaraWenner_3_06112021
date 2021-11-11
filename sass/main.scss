@@ -24,6 +24,9 @@ $secondary:#FF79DA;
 $tertiary: #99E2D0;
 $light-grey:rgb(246, 246, 246);
 
+$breakpoint-tablette: 768px;
+$breakpoint-desktop:1092px;
+
 @mixin block-shadow($colour){
     filter: drop-shadow(0 2px 4px $colour);
 }
@@ -51,6 +54,7 @@ $light-grey:rgb(246, 246, 246);
 
 @mixin article-style{
     width:90%;
+    margin:auto;
     margin-bottom: 20px;
     background-color: white;
     border-radius: 20px;
@@ -235,8 +239,14 @@ main{
 
 .explanation{
     background-color: white;
+    @media (min-width:  $breakpoint-tablette) {
+        & h2{
+            text-align: center;
+        }
+    }
     &__card{
         width:85%;
+        max-width:800px;
         background-color: $light-grey;
         border-radius: 20px;
         box-shadow: 0px 5px 10px #E4E4E4;
@@ -260,6 +270,10 @@ main{
             align-items: center;
             margin-bottom: 20px;
             margin-left:50px;
+            @media (min-width:  $breakpoint-tablette) {
+                margin-left:auto;
+                justify-content: center;
+            }
             & p{
                 margin-left:30px;
                 font-family: 'Roboto-Bold';
@@ -287,12 +301,33 @@ main{
 }
 
 .restaurants{
+    @media (min-width:  $breakpoint-tablette) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        & h2{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            text-align: center;
+            width:100%;
+        }
+    }
+    @media (min-width:  $breakpoint-desktop) {
+        grid-template-columns: repeat(3, 1fr);
+        & h2{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+    
     & a{
         @include article-style();
         display:block;
     }
     & article{
         font-size:20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         // position:relative;
         & img{
             object-fit: cover;
@@ -307,13 +342,17 @@ main{
         justify-content: space-between;
         align-items: center;
         padding:20px;
-        & h3{
-            font-family: 'Roboto-Bold';
+        &__txt{
+            overflow: hidden;
+            & h3{
+                font-family: 'Roboto-Bold';
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
         }
         &__icon{
             @include coeur();
         }
-
     }
     &__new{
         background-color: $tertiary;       
@@ -338,6 +377,12 @@ footer{
     padding-left: 30px;
     font-weight:bold;
     font-size:18px;
+    @media (min-width:  $breakpoint-tablette) {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     & div{
         display: flex;
         align-items: center;
@@ -399,6 +444,9 @@ footer{
     height:80px;
     display:flex;
     justify-content: space-between;
+    @media (min-width:  $breakpoint-tablette) {
+        justify-content: center;
+    }
     align-items: center;
     background-color: $light-grey;
     border-radius:30px 30px 0 0;
@@ -428,21 +476,44 @@ footer{
 .menu {
     padding-top:30px;
     padding-bottom: 90px;
+    @media (min-width:  $breakpoint-tablette) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        & h2{
+            text-align: center;
+            &::after{
+                margin: 6px auto auto auto;
+            }
+        }
+    }
+    @media (min-width:  $breakpoint-desktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
     & section{
         margin-bottom: 30px;
+        & h2{
+            font-family: 'Roboto-Thin';
+            font-size: 22px;    
+            margin-bottom: 20px;
+            &::after{
+                content:"";
+                display:block;
+                background-color: $tertiary;
+                height:5px;
+                width:50px;
+                margin-top:6px;
+            }
+        }
     }
-
-    & h2{
-        font-family: 'Roboto-Thin';
-        font-size: 22px;    
-        margin-bottom: 20px;
-        &::after{
-            content:"";
-            display:block;
-            background-color: $tertiary;
-            height:5px;
-            width:50px;
-            margin-top:6px;
+    .order-button{
+        @include button-style();
+        @media (min-width:  $breakpoint-tablette) { 
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        @media (min-width:  $breakpoint-desktop) { 
+            grid-column-start: 1;
+            grid-column-end: 4;
         }
     }
 }
@@ -467,12 +538,11 @@ footer{
 }
 
 
-.dish{
+.dish{ 
     @include article-style();
     cursor: pointer;
     opacity:0;
-    width:90%;
-    margin:auto;
+    width:90%;margin:auto;
     margin-bottom:15px;
     background-color: white;
     display:flex;
@@ -544,9 +614,7 @@ footer{
     }
 }
 
-.order-button{
-    @include button-style();
-}
+
 
 
 
