@@ -22,20 +22,23 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Roboto";
 }
 
-#logo {
+.logo {
   position: relative;
   padding-top: 20px;
   padding-bottom: 10px;
 }
-#logo img {
+.logo img {
   display: block;
   width: 200px;
   margin: auto;
 }
-#logo i {
+.logo i {
   position: absolute;
   left: 5%;
   top: 28px;
@@ -110,22 +113,22 @@ main section {
   box-shadow: 0px 3px 5px #c9c9c9;
 }
 
-#localisation {
+.localisation {
   background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
 }
-#localisation i {
+.localisation i {
   margin-right: 10px;
 }
-#localisation p {
+.localisation p {
   cursor: pointer;
   font-family: "Roboto-Bold";
 }
 
-#explorer {
+.explorer {
   height: 300px;
   background-color: #f6f6f6;
   display: flex;
@@ -135,17 +138,17 @@ main section {
   padding-top: 50px;
   text-align: center;
 }
-#explorer h1, #explorer p {
+.explorer h1, .explorer p {
   margin-bottom: 10px;
 }
-#explorer h1 {
+.explorer h1 {
   width: 70%;
   font-family: "Roboto-Black";
 }
-#explorer p {
+.explorer p {
   font-size: 22px;
 }
-#explorer__bouton {
+.explorer__button {
   width: 200px;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   color: white;
@@ -161,28 +164,27 @@ main section {
   text-align: center;
   cursor: pointer;
 }
-#explorer__bouton:hover {
+.explorer__button:hover {
   filter: drop-shadow(0 2px 4px #646464);
   background: linear-gradient(to bottom, #ff93e1 0%, #a16be0 100%);
 }
 
-#fonctionnement, .restaurants {
+.explanation, .restaurants {
   padding-bottom: 50px;
   padding-top: 50px;
 }
 
-#fonctionnement {
+.explanation {
   background-color: white;
 }
-
-.explication {
+.explanation__card {
   width: 85%;
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 5px 10px #E4E4E4;
   margin-bottom: 25px;
 }
-.explication__numero {
+.explanation__card__number {
   position: relative;
   left: -10px;
   top: 20px;
@@ -192,35 +194,35 @@ main section {
   border-radius: 100%;
   text-align: center;
 }
-.explication__numero p {
+.explanation__card__number p {
   padding-top: 5px;
   color: white;
 }
-.explication__etape {
+.explanation__card__txt {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   margin-left: 50px;
 }
-.explication__etape p {
+.explanation__card__txt p {
   margin-left: 30px;
   font-family: "Roboto-Bold";
 }
-.explication__etape .fas {
+.explanation__card__txt .fas {
   color: #8f8f8f;
 }
-.explication__etape .fa-mobile-alt {
+.explanation__card__txt .fa-mobile-alt {
   font-size: 20px;
 }
-.explication__etape #icon_menu {
+.explanation__card__txt .icon-menu {
   display: flex;
 }
-.explication__etape #icon_menu .fa-ellipsis-v {
+.explanation__card__txt .icon-menu .fa-ellipsis-v {
   font-size: 15px;
   margin-top: 1px;
   margin-right: 1px;
 }
-.explication__etape #icon_menu .fa-bars {
+.explanation__card__txt .icon-menu .fa-bars {
   font-size: 17px;
 }
 
@@ -251,7 +253,7 @@ main section {
   font-family: "Roboto-Bold";
 }
 .restaurants__description__icon .fas {
-  font-size: 28px;
+  font-size: 30px;
   background: linear-gradient(to right, #FF79DA 0%, #9356DC 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -266,7 +268,7 @@ main section {
   color: black;
   position: relative;
   z-index: 1;
-  left: 35px;
+  left: 36px;
   top: 1px;
   transition: opacity 500ms;
 }
@@ -276,7 +278,7 @@ main section {
 .restaurants__description__icon .far:hover {
   opacity: 0%;
 }
-.restaurants__nouveau {
+.restaurants__new {
   background-color: #99E2D0;
   color: #008766;
   font-family: "Roboto-Bold";
@@ -285,7 +287,7 @@ main section {
   top: 20px;
   width: 100px;
   text-align: center;
-  padding: 10px;
+  padding: 8px;
   border-radius: 3px;
 }
 
@@ -331,26 +333,30 @@ footer p a {
 }
 
 /*****SPECIFIQUE PAGE MENU******/
-.header__image {
+.header-image {
   height: 350px;
   background-size: cover;
   display: flex;
   align-items: flex-end;
 }
-.header__image__palette {
+
+.palette {
   background-image: url("../images/restaurants/palette_du_gout.jpg");
 }
-.header__image__note {
+
+.note {
   background-image: url("../images/restaurants/note_enchantee.jpg");
 }
-.header__image__francaise {
+
+.francaise {
   background-image: url("../images/restaurants/a_la_francaise.jpg");
 }
-.header__image__delice {
+
+.delice {
   background-image: url("../images/restaurants/delice_des_sens.jpg");
 }
 
-.nom_restaurant {
+.restaurant-title {
   width: 100%;
   height: 80px;
   display: flex;
@@ -363,18 +369,18 @@ footer p a {
   overflow: hidden;
   white-space: nowrap;
 }
-.nom_restaurant__txt {
+.restaurant-title__txt {
   overflow: hidden;
 }
-.nom_restaurant__txt h1 {
+.restaurant-title__txt h1 {
   font-family: "Shrikhand";
   font-size: 28px;
   text-overflow: ellipsis;
   overflow: hidden;
   padding-right: 10px;
 }
-.nom_restaurant__coeur .fas {
-  font-size: 28px;
+.restaurant-title__heart .fas {
+  font-size: 30px;
   background: linear-gradient(to right, #FF79DA 0%, #9356DC 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -383,36 +389,39 @@ footer p a {
   transition: opacity 500ms;
   z-index: 2;
 }
-.nom_restaurant__coeur .far {
+.restaurant-title__heart .far {
   cursor: pointer;
   font-size: 32px;
   color: black;
   position: relative;
   z-index: 1;
-  left: 35px;
+  left: 36px;
   top: 1px;
   transition: opacity 500ms;
 }
-.nom_restaurant__coeur .far:hover + i {
+.restaurant-title__heart .far:hover + i {
   opacity: 100%;
 }
-.nom_restaurant__coeur .far:hover {
+.restaurant-title__heart .far:hover {
   opacity: 0%;
 }
+.restaurant-title__heart .far {
+  left: 35px;
+}
 
-#menu {
+.menu {
   padding-top: 30px;
   padding-bottom: 90px;
 }
-#menu section {
+.menu section {
   margin-bottom: 30px;
 }
-#menu h2 {
+.menu h2 {
   font-family: "Roboto-Thin";
   font-size: 22px;
   margin-bottom: 20px;
 }
-#menu h2::after {
+.menu h2::after {
   content: "";
   display: block;
   background-color: #99E2D0;
@@ -431,67 +440,67 @@ footer p a {
     transform: translateY(0px);
   }
 }
-#plat1 {
+#dish1 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 150ms;
 }
 
-#plat2 {
+#dish2 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 300ms;
 }
 
-#plat3 {
+#dish3 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 450ms;
 }
 
-#plat4 {
+#dish4 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 600ms;
 }
 
-#plat5 {
+#dish5 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 750ms;
 }
 
-#plat6 {
+#dish6 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 900ms;
 }
 
-#plat7 {
+#dish7 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 1050ms;
 }
 
-#plat8 {
+#dish8 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 1200ms;
 }
 
-#plat9 {
+#dish9 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 1350ms;
 }
 
-#plat10 {
+#dish10 {
   animation: progress-menu 1500ms;
   animation-fill-mode: forwards;
   animation-delay: 1500ms;
 }
 
-.plat {
+.dish {
   width: 90%;
   margin-bottom: 20px;
   background-color: white;
@@ -506,17 +515,17 @@ footer p a {
   display: flex;
   overflow: hidden;
 }
-.plat:hover i {
+.dish:hover i {
   transform: rotate(360deg);
 }
-.plat:hover .check {
+.dish:hover .check {
   right: 0;
 }
-.plat:hover .nom_description_et_prix {
+.dish:hover .name-description-price {
   width: calc(100% - 112px);
 }
 
-.nom_description_et_prix {
+.name-description-price {
   margin: 15px;
   transition: width 1s;
   width: calc(100% - 30px);
@@ -525,13 +534,13 @@ footer p a {
   align-items: flex-end;
 }
 
-.nom_et_description {
+.name-description {
   transition: margin-right 1s;
   width: 100%;
   overflow: hidden;
 }
 
-.nom h3 {
+.name h3 {
   white-space: nowrap;
   font-size: 20px;
   text-overflow: ellipsis;
@@ -546,7 +555,7 @@ footer p a {
   overflow: hidden;
 }
 
-.prix {
+.price {
   transition: transform 1s;
   margin-left: 10px;
   font-family: "Roboto-Bold";
@@ -570,7 +579,7 @@ footer p a {
   margin: auto;
 }
 
-#command_button {
+.order-button {
   width: 200px;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   color: white;
@@ -586,7 +595,7 @@ footer p a {
   text-align: center;
   cursor: pointer;
 }
-#command_button:hover {
+.order-button:hover {
   filter: drop-shadow(0 2px 4px #646464);
   background: linear-gradient(to bottom, #ff93e1 0%, #a16be0 100%);
 }
