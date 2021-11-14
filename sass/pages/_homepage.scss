@@ -95,12 +95,11 @@
             background-color: $primary;
             width:30px;
             height: 30px;
+            line-height:30px;
             border-radius: 100%;
             text-align: center;
-            & p{
-                padding-top:5px;
-                color:white;
-            }
+            color:white;
+            
         }
         &__txt{
             display: flex;
@@ -138,6 +137,7 @@
 }
 
 .restaurants{
+    align-items: center;
     @include tablette-only {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
