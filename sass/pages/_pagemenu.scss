@@ -73,9 +73,7 @@
     & article{
         display:flex;
         flex-direction: column;
-        //justify-content: space-around;
         align-items: center;
-        align-content: flex-start;
         margin-bottom: 30px;
         & h2{
             font-family: 'Roboto-Thin';
@@ -121,8 +119,6 @@
     opacity:0;
     width:90%;
     margin:10px;
-    //margin:auto;
-    //margin-bottom:15px;
     background-color: white;
     display:flex;
     overflow: hidden;
@@ -154,7 +150,7 @@
     
 }
 
-.name h3{
+.name {
     white-space: nowrap;
     //width:100%;
     font-size:20px;

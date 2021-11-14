@@ -450,7 +450,6 @@ footer p a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: flex-start;
   margin-bottom: 30px;
 }
 .menu article h2 {
@@ -599,7 +598,7 @@ footer p a {
   overflow: hidden;
 }
 
-.name h3 {
+.name {
   white-space: nowrap;
   font-size: 20px;
   text-overflow: ellipsis;
