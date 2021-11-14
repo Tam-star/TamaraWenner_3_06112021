@@ -567,7 +567,7 @@ footer p a {
   cursor: pointer;
   opacity: 0;
   width: 90%;
-  margin: 10px;
+  margin: 0 0 15px 0;
   background-color: white;
   display: flex;
   overflow: hidden;
