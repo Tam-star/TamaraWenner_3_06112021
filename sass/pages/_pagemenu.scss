@@ -70,7 +70,11 @@
     @include desktop-only {
         grid-template-columns: repeat(3, 1fr);
     }
-    & section{
+    & article{
+        display:flex;
+        flex-direction: column;
+        //justify-content: space-around;
+        align-items: center;
         margin-bottom: 30px;
         & h2{
             font-family: 'Roboto-Thin';

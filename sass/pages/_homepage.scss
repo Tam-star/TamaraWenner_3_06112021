@@ -74,6 +74,7 @@
 }
 
 .explanation{
+    align-items: center;
     background-color: white;
     @include tablette-only {
         & h2{
