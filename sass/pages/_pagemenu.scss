@@ -115,7 +115,7 @@
 
 
 .dish{ 
-    @include article-style();
+    @include card-style();
     cursor: pointer;
     opacity:0;
     width:90%;margin:auto;

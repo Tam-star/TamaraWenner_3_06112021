@@ -157,7 +157,7 @@
     }
     
     & a{
-        @include article-style();
+        @include card-style();
         display:block;
     }
     & article{
