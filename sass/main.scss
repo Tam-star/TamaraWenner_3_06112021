@@ -1,10 +1,10 @@
-@import "./variables";
-@import "./fonts";
-@import "./mixins";
-@import "./keyframes";
+@import "./utils/variables";
+@import "./utils/fonts";
+@import "./utils/mixins";
+@import "./utils/keyframes";
 @import "./layouts/footer";
-@import "./layouts/homepage";
-@import "./layouts/pagemenu";
+@import "./pages/homepage";
+@import "./pages/pagemenu";
     
 /******GENERALE*******/
 
