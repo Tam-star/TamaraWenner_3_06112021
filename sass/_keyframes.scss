@@ -1,0 +1,31 @@
+
+@keyframes spinning-loader{
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes disappearing-loader {
+    0% {
+        visibility: visible;
+    }
+    100% {
+       visibility: hidden;
+    }
+
+}
+
+
+@keyframes progress-menu{
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity:100%;
+        transform: translateY(0px);
+    }
+}

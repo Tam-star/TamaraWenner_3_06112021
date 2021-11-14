@@ -1,0 +1,79 @@
+
+@mixin block-shadow($colour){
+    filter: drop-shadow(0 2px 4px $colour);
+}
+@mixin button-style{
+        width: 200px;
+        background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
+        color:white;
+        border-radius: 50px;
+        @include block-shadow(rgb(160, 160, 160));
+        margin:auto;
+        margin-top:20px;
+        padding-bottom:20px;
+        padding-top:20px;
+        padding-left:20px;
+        padding-right: 20px;
+        font-weight:bold;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+            @include block-shadow(rgb(100, 100, 100));
+            background: linear-gradient(to bottom, lighten($secondary, 5%) 0%, lighten($primary, 5%) 100%);
+
+        }
+}
+
+@mixin article-style{
+    width:90%;
+    margin:auto;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    @include block-shadow(rgb(206, 206, 206));
+}
+
+@mixin coeur{
+    & .fas{
+        font-size : 30px;
+        background: linear-gradient(to right, $secondary 0%, $primary 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity:0;
+        transition: opacity 500ms;
+        z-index: 2;
+    }
+    & .far{
+        cursor: pointer;
+        font-size : 32px;
+        color:black;
+        position:relative;
+        z-index: 1;
+        left:36px;
+        top:1px;
+        transition: opacity 500ms;
+        &:hover + i{
+            opacity:100%;
+        }
+        &:hover{
+            opacity:0%;
+        }
+    }   
+}
+
+//MEDIA QUERIES
+
+
+@mixin tablette-only{
+    @media(min-width: $breakpoint-tablette){
+        @content;
+    }
+}
+
+@mixin desktop-only{
+    @media(min-width: $breakpoint-desktop){
+        @content;
+    }
+}
+

@@ -1,0 +1,205 @@
+/*******SPECIFIQUE ACCUEIL*******/
+
+
+#loading-spinner{
+    animation: disappearing-loader 300ms;
+    animation-delay: 2000ms;
+    animation-fill-mode: forwards;
+    background-color: $light-grey;
+    position:fixed;
+    z-index:2;
+    opacity:70%;
+    height:100vh;
+    width:100vw;
+    display:flex;
+    & i{
+        animation: spinning-loader 2000ms linear infinite;
+        display:block;
+        margin:auto;
+        font-size : 60px;
+        background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
+        background-clip:text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight:bold;
+    }
+}
+
+.logo-shadow{
+    box-shadow: 0px 3px 5px rgb(201, 201, 201);
+}
+
+.localisation{
+    background-color: rgb(234, 234, 234);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    & i{
+        margin-right: 10px;
+    }
+    & p{   
+        cursor: pointer;
+        font-family: 'Roboto-Bold';
+    }
+}
+
+.explorer{
+    height:300px;
+    background-color: $light-grey;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:50px;
+    text-align: center;
+    & h1, p{
+        margin-bottom: 10px;
+    }
+    & h1{
+        width:70%;
+        font-family: 'Roboto-Black';
+    }
+    & p{
+        font-size:22px;
+    }
+    &__button{
+        @include button-style();
+    }
+}
+
+.explanation, .restaurants{
+    padding-bottom:50px;
+    padding-top:50px;
+}
+
+.explanation{
+    background-color: white;
+    @include tablette-only {
+        & h2{
+            text-align: center;
+        }
+    }
+    &__card{
+        width:85%;
+        max-width:800px;
+        background-color: $light-grey;
+        border-radius: 20px;
+        box-shadow: 0px 5px 10px #E4E4E4;
+        margin-bottom:25px;
+        &__number{
+            position:relative;
+            left:-10px;
+            top:20px;
+            background-color: $primary;
+            width:30px;
+            height: 30px;
+            border-radius: 100%;
+            text-align: center;
+            & p{
+                padding-top:5px;
+                color:white;
+            }
+        }
+        &__txt{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-left:50px;
+            @include tablette-only  {
+                margin-left:auto;
+                justify-content: center;
+            }
+            & p{
+                margin-left:30px;
+                font-family: 'Roboto-Bold';
+            }
+            & .fas{ 
+                color:rgb(143, 143, 143);
+            }
+            & .fa-mobile-alt{
+                font-size: 20px;
+            }
+            & .icon-menu{
+                display: flex;
+                & .fa-ellipsis-v{
+                    font-size:15px;
+                    margin-top:1px;
+                    margin-right:1px;
+                }
+                & .fa-bars{
+                    font-size:17px;
+                }
+            }
+        }
+        
+    }
+}
+
+.restaurants{
+    @include tablette-only {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        & h2{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            text-align: center;
+            width:100%;
+        }
+    }
+    @include desktop-only {
+        grid-template-columns: repeat(3, 1fr);
+        & h2{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+    
+    & a{
+        @include article-style();
+        display:block;
+    }
+    & article{
+        font-size:20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        // position:relative;
+        & img{
+            object-fit: cover;
+            width:100%;
+            height:240px;
+            border-radius: 20px 20px 0 0;
+        }
+        
+    }
+    &__description{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:20px;
+        &__txt{
+            overflow: hidden;
+            & h3{
+                font-family: 'Roboto-Bold';
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        &__icon{
+            @include coeur();
+        }
+    }
+    &__new{
+        background-color: $tertiary;       
+        color:rgb(0, 135, 102);
+        font-family: 'Roboto-Bold';
+        position:absolute;
+        right:15px;
+        top:20px;
+        width:100px;
+        text-align: center;
+        padding:8px;
+        border-radius: 3px;
+    }
+}

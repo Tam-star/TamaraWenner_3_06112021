@@ -1,0 +1,190 @@
+/*****SPECIFIQUE PAGE MENU******/
+
+.header-image{
+    height:350px;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
+
+.palette{
+    background-image: url("../images/restaurants/palette_du_gout.jpg");
+}
+.note{
+    background-image: url("../images/restaurants/note_enchantee.jpg");
+}
+.francaise{
+    background-image: url("../images/restaurants/a_la_francaise.jpg");
+}
+.delice{
+    background-image: url("../images/restaurants/delice_des_sens.jpg");
+}
+
+.restaurant-title{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    @include tablette-only {
+        justify-content: center;
+    }
+    align-items: center;
+    background-color: $light-grey;
+    border-radius:30px 30px 0 0;
+    padding-left:20px;
+    padding-right:20px;
+    overflow: hidden;
+    white-space: nowrap;
+    &__txt{
+        overflow: hidden;
+        & h1{
+            font-family: 'Shrikhand';
+            font-size: 28px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding-right:10px;
+        }
+    }
+    &__heart{
+        @include coeur();   
+        & .far{
+            left:35px;
+        }
+    }   
+}
+
+
+.menu {
+    padding-top:30px;
+    padding-bottom: 90px;
+    @include tablette-only {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        & h2{
+            text-align: center;
+            &::after{
+                margin: 6px auto auto auto;
+            }
+        }
+    }
+    @include desktop-only {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    & section{
+        margin-bottom: 30px;
+        & h2{
+            font-family: 'Roboto-Thin';
+            font-size: 22px;    
+            margin-bottom: 20px;
+            &::after{
+                content:"";
+                display:block;
+                background-color: $tertiary;
+                height:5px;
+                width:50px;
+                margin-top:6px;
+            }
+        }
+    }
+    .order-button{
+        @include button-style();
+        @include tablette-only{ 
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        @include desktop-only{ 
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+}
+
+
+
+@for $i from 1 through 10 {
+    #dish#{$i} {
+        animation : progress-menu 1500ms;
+        animation-fill-mode: forwards;
+        animation-delay: 150ms*$i;
+    }
+}
+
+
+.dish{ 
+    @include article-style();
+    cursor: pointer;
+    opacity:0;
+    width:90%;margin:auto;
+    margin-bottom:15px;
+    background-color: white;
+    display:flex;
+    overflow: hidden;
+    &:hover i{
+        transform: rotate(360deg);
+    }
+    &:hover .check {
+        right:0;
+    }
+    &:hover .name-description-price{
+        width: calc(100% - 112px);
+    }
+}
+
+
+.name-description-price{
+    margin:15px;
+    transition: width 1s;
+    width:calc(100% - 30px);
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.name-description{
+    transition: margin-right 1s;
+    width:100%;
+    overflow: hidden;
+    
+}
+
+.name h3{
+    white-space: nowrap;
+    //width:100%;
+    font-size:20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: 'Roboto-Bold';
+}
+.description{
+    //width:100%;
+    margin-top:5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.price{
+    transition: transform 1s;
+    margin-left:10px;
+    font-family: 'Roboto-Bold';
+}
+.check{
+    transition: right 1s;
+    background-color: $tertiary;
+    border-radius: 0 20px 20px 0;
+    width:80px;
+    height:100%;
+    position:absolute;
+    right:-82px;
+    display:flex;
+    & i{
+        transition: transform 1s;
+        color:white;
+        font-size:30px;
+        text-align: center;
+        margin:auto;
+    }
+}
+
+
+

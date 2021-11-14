@@ -1,0 +1,47 @@
+
+footer{
+    background-color: rgb(55, 55, 55);
+    color:white;
+    padding-top:30px;
+    padding-bottom:50px;
+    padding-left: 30px;
+    font-weight:bold;
+    font-size:18px;
+    @include tablette-only{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    & div{
+        display: flex;
+        align-items: center;
+        & i{
+            margin-right:12px;
+        }
+    }
+    & div, p{
+        margin-bottom: 5px;
+    }
+    & p {
+        cursor:pointer;
+        & a{
+            color:white;
+        }
+    }
+}
+
+.logo-font{
+    font-family: 'Shrikhand';
+    font-weight: normal;
+    font-size:25px;
+    margin-bottom: 20px;
+}
+
+.fa-utensils{
+    font-size:16px;
+}
+
+.fa-hands-helping{
+    font-size:13px;
+}
