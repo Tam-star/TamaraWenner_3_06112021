@@ -450,6 +450,7 @@ footer p a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: flex-start;
   margin-bottom: 30px;
 }
 .menu article h2 {
@@ -568,8 +569,7 @@ footer p a {
   cursor: pointer;
   opacity: 0;
   width: 90%;
-  margin: auto;
-  margin-bottom: 15px;
+  margin: 10px;
   background-color: white;
   display: flex;
   overflow: hidden;

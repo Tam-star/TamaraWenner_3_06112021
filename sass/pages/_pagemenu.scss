@@ -75,6 +75,7 @@
         flex-direction: column;
         //justify-content: space-around;
         align-items: center;
+        align-content: flex-start;
         margin-bottom: 30px;
         & h2{
             font-family: 'Roboto-Thin';
@@ -118,8 +119,10 @@
     @include card-style();
     cursor: pointer;
     opacity:0;
-    width:90%;margin:auto;
-    margin-bottom:15px;
+    width:90%;
+    margin:10px;
+    //margin:auto;
+    //margin-bottom:15px;
     background-color: white;
     display:flex;
     overflow: hidden;
