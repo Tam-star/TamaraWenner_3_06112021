@@ -37,13 +37,12 @@
     white-space: nowrap;
     &__txt{
         overflow: hidden;
-        & h1{
-            font-family: 'Shrikhand';
-            font-size: 28px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            padding-right:10px;
-        }
+        font-family: 'Shrikhand';
+        font-size: 28px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-right:10px;
+        
     }
     &__heart{
         @include coeur();   

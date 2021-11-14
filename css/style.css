@@ -387,8 +387,6 @@ footer p a {
 }
 .restaurant-title__txt {
   overflow: hidden;
-}
-.restaurant-title__txt h1 {
   font-family: "Shrikhand";
   font-size: 28px;
   text-overflow: ellipsis;
