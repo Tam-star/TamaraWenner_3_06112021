@@ -433,12 +433,6 @@ footer p a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .menu h2 {
-    text-align: center;
-  }
-  .menu h2::after {
-    margin: 6px auto auto auto;
-  }
 }
 @media (min-width: 1092px) {
   .menu {
@@ -453,8 +447,15 @@ footer p a {
 }
 .menu article h2 {
   font-family: "Roboto-Thin";
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 20px;
+  padding-left: 20px;
+}
+@media (min-width: 768px) {
+  .menu article h2 {
+    text-align: center;
+    padding-left: 0px;
+  }
 }
 .menu article h2::after {
   content: "";
@@ -463,6 +464,11 @@ footer p a {
   height: 5px;
   width: 50px;
   margin-top: 6px;
+}
+@media (min-width: 768px) {
+  .menu article h2::after {
+    margin: 6px auto auto auto;
+  }
 }
 .menu .order-button {
   width: 200px;
