@@ -162,10 +162,8 @@
     }
     & article{
         font-size:20px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        // position:relative;
+        position:relative;
+        @include ellipsis-txt-style();
         & img{
             object-fit: cover;
             width:100%;
@@ -183,12 +181,11 @@
             overflow: hidden;
             & h3{
                 font-family: 'Roboto-Bold';
-                text-overflow: ellipsis;
-                overflow: hidden;
+                @include ellipsis-txt-style();
             }
         }
         &__icon{
-            @include coeur();
+            @include heart();
         }
     }
     &__new{

@@ -33,7 +33,7 @@
     @include block-shadow(rgb(206, 206, 206));
 }
 
-@mixin coeur{
+@mixin heart{
     & .fas{
         font-size : 30px;
         background: linear-gradient(to right, $secondary 0%, $primary 100%);
@@ -60,6 +60,12 @@
             opacity:0%;
         }
     }   
+}
+
+@mixin ellipsis-txt-style{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 //MEDIA QUERIES
