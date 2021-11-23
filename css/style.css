@@ -283,6 +283,13 @@ main section {
   font-size: 17px;
 }
 
+.last-card {
+  background-color: #F1EBFE;
+}
+.last-card .fas {
+  color: #9356DC;
+}
+
 .restaurants {
   align-items: center;
 }

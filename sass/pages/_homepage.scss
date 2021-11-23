@@ -135,6 +135,13 @@
     }
 }
 
+.last-card{
+    background-color: #F1EBFE;
+    & .fas{
+        color : $primary;
+    }
+}
+
 .restaurants{
     align-items: center;
     @include tablette-only {
