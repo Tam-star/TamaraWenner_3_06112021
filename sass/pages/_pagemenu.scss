@@ -8,16 +8,52 @@
 }
 
 .palette{
-    background-image: url("../images/restaurants/palette_du_gout.jpg");
+    background-image: url("../images/restaurants/xlarge/palette_du_gout.webp");
+    @media(max-width: 1200px){
+        background-image: url("../images/restaurants/large/palette_du_gout.webp");
+    }
+    @media(max-width: 900px){
+        background-image: url("../images/restaurants/medium/palette_du_gout.webp");
+    }
+    @media(max-width: 600px){
+        background-image: url("../images/restaurants/small/palette_du_gout.webp");
+    }
 }
 .note{
-    background-image: url("../images/restaurants/note_enchantee.jpg");
+    background-image: url("../images/restaurants/xlarge/note_enchantee.webp");
+    @media(max-width: 1200px){
+        background-image: url("../images/restaurants/large/note_enchantee.webp");
+    }
+    @media(max-width: 900px){
+        background-image: url("../images/restaurants/medium/note_enchantee.webp");
+    }
+    @media(max-width: 600px){
+        background-image: url("../images/restaurants/small/note_enchantee.webp");
+    }
 }
 .francaise{
-    background-image: url("../images/restaurants/a_la_francaise.jpg");
+    background-image: url("../images/restaurants/xlarge/a_la_francaise.webp");
+    @media(max-width: 1200px){
+        background-image: url("../images/restaurants/large/a_la_francaise.webp");
+    }
+    @media(max-width: 900px){
+        background-image: url("../images/restaurants/medium/a_la_francaise.webp");
+    }
+    @media(max-width: 600px){
+        background-image: url("../images/restaurants/small/a_la_francaise.webp");
+    }
 }
 .delice{
-    background-image: url("../images/restaurants/delice_des_sens.jpg");
+    background-image: url("../images/restaurants/xlarge/delice_des_sens.webp");
+    @media(max-width: 1200px){
+        background-image: url("../images/restaurants/large/delice_des_sens.webp");
+    }
+    @media(max-width: 900px){
+        background-image: url("../images/restaurants/medium/delice_des_sens.webp");
+    }
+    @media(max-width: 600px){
+        background-image: url("../images/restaurants/small/delice_des_sens.webp");
+    }
 }
 
 .restaurant-title{
