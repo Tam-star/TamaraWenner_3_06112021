@@ -5,7 +5,7 @@ footer{
     padding-top:30px;
     padding-bottom:50px;
     padding-left: 30px;
-    font-weight:bold;
+    @include roboto-font(500);
     font-size:18px;
     @include tablette-only{
         display:flex;

@@ -1,0 +1,50 @@
+/******GENERALE*******/
+
+*{
+    margin:0;
+    padding:0; 
+}
+
+body{
+    font-family: 'Roboto';
+}
+
+.logo{
+    position:relative;
+    padding-top:20px;
+    padding-bottom: 10px;
+    & img{
+        display:block;
+        width:200px;
+        margin: auto;
+    }
+    & i{
+        position:absolute;
+        left:5%;
+        top:28px;
+    }
+}
+
+.fa-heart{
+    font-size:30px;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+main{
+    background-color: $light-grey;
+    & h2{
+        @include roboto-font(900);
+        font-size:30px;
+        margin-bottom: 30px;
+        width:90%;
+    }
+    & section{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

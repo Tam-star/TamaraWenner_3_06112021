@@ -1,4 +1,9 @@
 
+@mixin roboto-font($weight){
+    font-family: 'Roboto', sans-serif;
+    font-weight: $weight;
+}
+
 @mixin block-shadow($colour){
     filter: drop-shadow(0 2px 4px $colour);
 }
@@ -14,7 +19,7 @@
         padding-top:20px;
         padding-left:20px;
         padding-right: 20px;
-        font-weight:bold;
+        @include roboto-font(500);
         text-align: center;
         cursor: pointer;
         &:hover{
