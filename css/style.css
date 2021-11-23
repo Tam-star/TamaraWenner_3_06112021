@@ -173,13 +173,11 @@ main section {
 }
 
 .explorer {
-  height: 300px;
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding: 50px 0;
   text-align: center;
 }
 .explorer h1, .explorer p {
@@ -187,6 +185,7 @@ main section {
 }
 .explorer h1 {
   width: 70%;
+  margin-top: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }

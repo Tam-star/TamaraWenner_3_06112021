@@ -45,19 +45,18 @@
 }
 
 .explorer{
-    height:300px;
     background-color: $light-grey;
     display:flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-top:50px;
+    padding:50px 0;
     text-align: center;
     & h1, p{
         margin-bottom: 10px;
     }
     & h1{
         width:70%;
+        margin-top:0;
         @include roboto-font(900);
     }
     & p{
