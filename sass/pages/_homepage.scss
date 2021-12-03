@@ -131,16 +131,16 @@
                 }
             }
         }
-        
+        &--last-card{
+            background-color: #F1EBFE;
+                & .fas{
+                    color : $primary;
+                }
+            }
     }
 }
 
-.last-card{
-    background-color: #F1EBFE;
-    & .fas{
-        color : $primary;
-    }
-}
+
 
 .restaurants{
     align-items: center;
